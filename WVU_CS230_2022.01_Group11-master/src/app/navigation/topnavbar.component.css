@@ -1,0 +1,20 @@
+.mainnavbarbutton {
+    color: darkgreen;
+    font-weight: bold;
+    padding-left: 24.5%;
+    font-size: 30px;
+}
+
+.nextbuttons {
+    padding-top: 1%;
+    color: black;
+}
+
+.signin {
+    padding-left: 62.5%;
+}
+
+.navbar{
+    max-width: 100%;
+    background-color: whitesmoke;
+}

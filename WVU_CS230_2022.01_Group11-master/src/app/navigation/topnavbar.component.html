@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-light "> <!-- Beginning of navbar.-->
+
+  <div class="container-fluid"> <!-- Container that holds all the buttons-->
+
+    <a class="navbar-brand mainnavbarbutton" [routerLink]="['home']">Reciplanner</a> <!-- Home button that routes back to homepage.-->
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+      <span class="navbar-toggler-icon"></span> <!-- Default navbar setup pulled from bootstrap.-->
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- Contains the next buttons in the navbar-->
+      <ul class="navbar-nav nextbuttons"> 
+
+        <li class="nav-item dropdown">
+          <button class="btn nav-item nav-link-edit" [routerLink]="['search']">Search</button> <!-- Search button. -->
+        <li class="nav-item dropdown">
+
+          <li class="nav-item dropdown">
+            <button class="btn nav-item nav-link-edit" [routerLink]="['top-recipes']">Top Recipes</button> <!-- Top Recipes button. -->
+          <li class="nav-item dropdown">
+          
+        </li>
+
+      </ul>
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 signin">
+
+        <li class="nav-item" *ngIf="!ifLoggedIn">
+          <a class="nav-link active" aria-current="page" href="#" [routerLink]="['sign-in']">Sign-in</a> <!-- This is the sign-in button.-->
+
+        </li>
+
+        <li *ngIf="ifLoggedIn" class="nav-item dropdown">
+
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            {{displayName}} <!-- Show user display name when logged in instead of sign-in button.-->
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" (click)="signOut()" href="#">Sign out</a></li> <!--The sign-out button only shows while logged in.-->
+            <li><a class="dropdown-item" href="#" [routerLink]="['profile']">Profile Page</a></li> <!--Button to take you to the profile page only shows up when signed in.-->
+          </ul>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>

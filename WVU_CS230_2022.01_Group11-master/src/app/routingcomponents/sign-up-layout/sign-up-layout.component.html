@@ -1,0 +1,62 @@
+<div class="container background">
+   
+    <form #postForm="ngForm"  (ngSubmit)="signUp(postForm)">
+        <h1 class="heading">Create an account with ReciPlanner</h1>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon3">Username</span>
+            <input type="text" class="form-control" placeholder="Enter displayName" required name ngModel
+                name="displayName" minlength="3" aria-describedby="displayName" #displayName="ngModel">
+        </div>
+        <div class="flex" *ngIf="displayName.invalid && (displayName.dirty || displayName.touched)">
+            <div *ngIf="displayName.errors?.['required']" class="alert alert-danger">
+                Display name is required
+            </div>
+            <div *ngIf="displayName.errors?.['minlength']" class="alert alert-danger">
+                Display Name too short
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Email </span>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" ngModel name="email"
+                required email aria-label="email" minlength="5" #email="ngModel">
+
+        </div>
+        <div class="flex" *ngIf="email.invalid && (email.dirty || email.touched)">
+            <div *ngIf="email.errors?.['required'] && email.touched" class="alert alert-danger">
+                Email is required
+            </div>
+            <div *ngIf="!email.errors?.['required'] && email.invalid" class="alert alert-danger">
+                Email is invalid format
+            </div>
+            
+        </div>
+
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon3">Password</span>
+            <input type="password" class="form-control" placeholder="password" required password id="basic-url" ngModel
+                name="password" minlength="8" aria-describedby="password" #password="ngModel">
+        </div>
+        <div class="flex" *ngIf="password.invalid && (password.dirty || password.touched)">
+            <div *ngIf="password.errors?.['required']" class="alert alert-danger">
+                Password is required
+            </div>
+            <div *ngIf="password.errors?.['minlength']" class="alert alert-danger">
+                Password too short
+            </div>
+
+
+        </div>
+        <button class="btn" [disabled]="!postForm.valid" type="submit">Sign Up</button>
+        <h5 class="sub">Already have an account?
+            <a class="link" (click)="redirectToSignIn()" type="click">Login.</a>
+        </h5>
+
+
+
+
+
+
+    </form>
+
+</div>

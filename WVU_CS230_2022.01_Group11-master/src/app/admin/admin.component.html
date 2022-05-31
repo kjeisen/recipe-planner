@@ -1,0 +1,46 @@
+<div class = "container"> 
+    <div class = "row"> 
+        <div class = "col-8">
+            <form #postForm = "ngForm" (ngSubmit)="cleanData(postForm.value)">
+
+                <div class = "input-group">
+                    <span class = "input-group-text">
+                        Image Path:
+                    </span >
+                    <input type = "text" class = "form-control" ngModel name = "img">
+                </div>
+                
+                <div class = "input-group">
+                    <span class = "input-group-text">
+                        Title:
+                    </span >
+                    <input type = "text" class = "form-control" ngModel name = "title">
+                </div>
+                
+                <div class = "input-group">
+                    <span class = "input-group-text">
+                        Ingredients:
+                    </span >
+                    <input type = "text" class = "form-control" ngModel name = "ingredients">
+                </div>
+
+                <div class = "input-group">
+                    <span class = "input-group-text">
+                        Direction:
+                    </span >
+                    <input type = "text" class = "form-control" ngModel name = "directions">
+                </div>
+
+                <div class = "input-group">
+                    <span class = "input-group-text">
+                        Keywords:
+                    </span >
+                    <input type = "text" class = "form-control" ngModel name = "keywords">
+                </div>
+
+                <button type = "submit"[disabled]="!postForm.valid" class = "btn btn-light">Add Product</button>
+
+            </form>
+        </div>
+    </div>
+</div>

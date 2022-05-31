@@ -1,0 +1,16 @@
+<div class="body">
+  <div class="container-fluid">
+    <form class="d-flex">
+      <input class="form-control me-2" type="text" [(ngModel)]="search" name="filter" placeholder="Enter an ingredient"
+        aria-label="Search">
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="row flex">
+    <div class="col-3" *ngFor=" let recipe of recipes | SearchFilter:search">
+      <rp-searchCard img={{recipe.img}} title={{recipe.title}} (click) = "goToResults(recipe)"></rp-searchCard>
+    </div>
+
+  </div>
+</div>

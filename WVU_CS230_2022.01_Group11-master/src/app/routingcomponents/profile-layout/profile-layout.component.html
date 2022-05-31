@@ -1,0 +1,29 @@
+
+<div class="row">
+    <div class="title">
+        <p> Welcome {{displayName}}</p>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <p> Your saved recipes </p>
+    <div *ngIf="recipes.length < 1">Your currently have no saved Recipes</div>
+    <div class="row"></div>
+    <div class ="col-3" *ngFor=" let recipe of recipes">
+        <rp-searchCard img={{recipe.img}} title={{recipe.title}} (click)="goToResults(recipe)"></rp-searchCard>
+    </div>
+    <div class="col-3"></div>
+</div>
+<div class="row" *ngIf="recipes.length >= 1">
+    <p> Your shopping list </p>
+    <div class="row" *ngFor=" let recipe of recipes">
+        <div class="col-6 "*ngFor="let ingredient of recipe.ingredients">
+           <li class="">{{ingredient}}</li>
+        </div>
+    </div>
+    <div class="col-3"></div>
+    <div class="col-3">
+    </div>
+    <div class="col-3"></div>
+
+</div>

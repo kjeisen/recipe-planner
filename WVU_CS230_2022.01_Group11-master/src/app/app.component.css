@@ -1,0 +1,5 @@
+body {
+    background-image: url("/assets/greengradient.png");
+    background-size: cover;
+    max-width: 100%;
+}

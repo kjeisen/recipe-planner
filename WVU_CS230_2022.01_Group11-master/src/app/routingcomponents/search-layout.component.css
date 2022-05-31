@@ -1,0 +1,10 @@
+.flex{
+    display: flex;
+    
+}
+.body {
+    padding: 50px;
+}
+.container-fluid{
+    margin: 1rem;
+}

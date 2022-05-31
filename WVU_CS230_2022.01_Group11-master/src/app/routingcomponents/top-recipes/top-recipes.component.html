@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="row"></div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div class="row">
+                <div class="col-12" *ngFor="let recipe of products">
+                    <tr-card class="products" img={{recipe.img}} title={{recipe.title}} desc={{recipe.desc}}>
+                    </tr-card>
+                </div>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>

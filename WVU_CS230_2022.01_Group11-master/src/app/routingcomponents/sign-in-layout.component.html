@@ -1,0 +1,30 @@
+<div class="container background">
+   
+            <form #postForm="ngForm"  (ngSubmit)="signIn(postForm)">
+                <h1 class="heading">Login to ReciPlanner</h1>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Email</span>
+                    <input type="email" class="form-control" placeholder="Enter your username" ngModel name="email"
+                        required email aria-label="Username">
+
+                </div>
+
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Password</span>
+                    <input type="password" class="form-control" placeholder="password"required password id="basic-url" ngModel name="password"
+                        minlength="8" aria-describedby="basic-addon3">
+                </div>
+                <button class="btn" [disabled]="!postForm.valid" type="submit">Login</button>
+                <h5 class="sub">Don't have an account?
+                    <a class="link"(click)="redirectToSignUp()">Create One.</a>
+                </h5>
+
+
+
+
+
+
+            </form>
+        
+    </div>

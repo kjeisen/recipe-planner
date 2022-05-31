@@ -1,0 +1,43 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-1"></div>
+
+        <div class="col-10">
+
+            <div class="background">
+                <rp-caurosel>
+                    Loading...
+                </rp-caurosel>
+            </div>
+        </div>
+
+        <div class="col-1"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-2"></div>
+
+        <div class="col-8">
+
+            <div class="row">
+                <h1 class="text1">
+                    Recipes, anytime, anywhere
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="col-sm" *ngFor="let card of cards">
+                 <rp-homedisplaycard img={{card.img}} title={{card.title}}>
+                     Loading...
+                 </rp-homedisplaycard>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col-2"></div>
+    </div>
+
+</div>

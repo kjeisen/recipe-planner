@@ -1,0 +1,31 @@
+.card{
+    width: 10.8%;
+    height:21.8%;
+    margin-top: 0px;
+    outline: none;
+    object-fit: fill;
+    border: 0;
+    background: none;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-left: .93%;
+    padding-right: .93%;
+    padding-top: .39%;
+    margin-left: -.39%;
+    height: auto;
+     max-height: 350px;
+     width: auto;
+     max-width: 350px;
+    background-color: white;
+    
+}
+
+p.card-title{
+    z-index: 100;
+    object-fit: cover;
+    letter-spacing: -.3px;
+    color: black;
+    margin-top: .93%;
+    text-align: center;
+} 

@@ -1,0 +1,16 @@
+.absolute{
+    position: absolute;
+    color: yellow;
+    fill: yellow;
+}
+.absolute:hover{
+    fill:grey;
+}
+.container {
+    background-image: url("/assets/greengradient.png");
+    background-size: cover;
+}
+
+.text{
+    fill: white;
+}
